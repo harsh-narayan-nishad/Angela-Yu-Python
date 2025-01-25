@@ -3,24 +3,24 @@ def print_spiral(matrix):
     spiral_order = []
     
     while top <= bottom and left <= right:
-        # Traverse from left to right along the top row
+        # Traversing from left to right along the top row
         for i in range(left, right + 1):
             spiral_order.append(matrix[top][i])
         top += 1
 
-        # Traverse from top to bottom along the right column
+        # Traversing from top to bottom along the right column
         for i in range(top, bottom + 1):
             spiral_order.append(matrix[i][right])
         right -= 1
 
         if top <= bottom:
-            # Traverse from right to left along the bottom row
+            # Traversing from right to left along the bottom row
             for i in range(right, left - 1, -1):
                 spiral_order.append(matrix[bottom][i])
             bottom -= 1
 
         if left <= right:
-            # Traverse from bottom to top along the left column
+            # Traversing from bottom to top along the left column
             for i in range(bottom, top - 1, -1):
                 spiral_order.append(matrix[i][left])
             left += 1
